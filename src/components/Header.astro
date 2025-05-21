@@ -70,17 +70,20 @@ const isActive = (path: string) => {
         >
           <li class="col-span-2">
             <a href="/posts" class:list={{ "active-nav": isActive("/posts") }}>
-              Posts
+              게시글
+            </a>
+          </li>
+          <li class="col-span-2">
+            <a
+              href="/projects"
+              class:list={{ "active-nav": isActive("/projects") }}
+            >
+              프로젝트
             </a>
           </li>
           <li class="col-span-2">
             <a href="/tags" class:list={{ "active-nav": isActive("/tags") }}>
-              Tags
-            </a>
-          </li>
-          <li class="col-span-2">
-            <a href="/about" class:list={{ "active-nav": isActive("/about") }}>
-              About
+              태그
             </a>
           </li>
           {
@@ -111,10 +114,10 @@ const isActive = (path: string) => {
                 { "[&>svg]:stroke-accent": isActive("/search") },
               ]}
               ariaLabel="search"
-              title="Search"
+              title="검색"
             >
               <IconSearch />
-              <span class="sr-only">Search</span>
+              <span class="sr-only">검색</span>
             </LinkButton>
           </li>
           {

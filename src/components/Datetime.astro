@@ -1,5 +1,6 @@
 ---
 import dayjs from "dayjs";
+import "dayjs/locale/ko";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import IconCalendar from "@/assets/icons/IconCalendar.svg";
@@ -7,6 +8,7 @@ import { SITE } from "@/config";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
+dayjs.locale("ko");
 
 export interface Props {
   class?: string;
@@ -29,8 +31,8 @@ const latestDatetime =
   modDatetime && modDatetime > pubDatetime ? modDatetime : pubDatetime;
 const datetime = dayjs(latestDatetime).tz(postTimezone || SITE.timezone);
 
-const date = datetime.format("D MMM, YYYY"); // e.g., '22 Mar, 2025'
-const time = datetime.format("hh:mm A"); // e.g., '08:30 PM'
+const date = datetime.format("YYYY년 M월 D일 (ddd)"); // 예: 2025년 3월 22일 (토)
+// const time = datetime.format("A h:mm"); // 예: 오후 8:30
 ---
 
 <div class:list={["flex items-end space-x-2 opacity-80", className]}>
@@ -43,16 +45,16 @@ const time = datetime.format("hh:mm A"); // e.g., '08:30 PM'
   {
     modDatetime && modDatetime > pubDatetime ? (
       <span class:list={["text-sm italic", { "sm:text-base": size === "lg" }]}>
-        Updated:
+        업데이트된 날짜:
       </span>
     ) : (
-      <span class="sr-only">Published:</span>
+      <span class="sr-only">게시된 날짜:</span>
     )
   }
   <span class:list={["text-sm italic", { "sm:text-base": size === "lg" }]}>
     <time datetime={datetime.toISOString()}>{date}</time>
-    <span aria-hidden="true"> | </span>
+    <!-- <span aria-hidden="true"> | </span> -->
     <span class="sr-only">&nbsp;at&nbsp;</span>
-    <span class="text-nowrap">{time}</span>
+    <!-- <span class="text-nowrap">{time}</span> -->
   </span>
 </div>

@@ -8,29 +8,29 @@ import LinkButton from "@/components/LinkButton.astro";
 import Card from "@/components/Card.astro";
 import Hr from "@/components/Hr.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
+import getSortedProjects from "@/utils/getSortedProjects";
 import IconRss from "@/assets/icons/IconRss.svg";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import { SITE } from "@/config";
 import { SOCIALS } from "@/constants";
 
 const posts = await getCollection("blog");
-const projects = await getCollection("project");
-console.log("🚀 projects = ", projects);
-// console.log("🚀 posts = ", posts);
+const projects = await getCollection("projects");
 
 const sortedPosts = getSortedPosts(posts);
-const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
+const sortedProjects = getSortedProjects(projects);
+// const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
-// console.log("🚀 featuredPosts = ", featuredPosts);
+const recentProjects = sortedProjects.filter(({ data }) => data.featured);
 ---
 
 <Layout>
   <Header />
   <main id="main-content" data-layout="index">
     <section id="hero" class="pt-8 pb-6">
-      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        기술 블로그.
-      </h1>
+      <h2 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-4xl">
+        기억을 믿지 말고, 기록을 믿어라.
+      </h2>
       <a
         target="_blank"
         href="/rss.xml"
@@ -46,12 +46,14 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         <span class="sr-only">RSS Feed</span>
       </a>
 
-      <p>블로그 소개글</p>
+      <p>
+        매일 배우고 지나치는 개념들을 기록하고, 다른 분들과 지식을 나누고
+        싶습니다. <br />
+        의견과 피드백은 언제나 환영입니다. :)
+      </p>
       {
-        // only display if at least one social link is enabled
         SOCIALS.length > 0 && (
           <div class="mt-4 flex flex-col sm:flex-row sm:items-center">
-            <div class="mr-2 mb-1 whitespace-nowrap sm:mb-0">연락하기:</div>
             <Socials />
           </div>
         )
@@ -60,7 +62,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
     <Hr />
 
-    {
+    <!-- {
       featuredPosts.length > 0 && (
         <>
           <section id="featured" class="pt-12 pb-6">
@@ -74,7 +76,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
           {recentPosts.length > 0 && <Hr />}
         </>
       )
-    }
+    } -->
 
     {
       recentPosts.length > 0 && (
@@ -82,6 +84,19 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
           <h2 class="text-2xl font-semibold tracking-wide">최근 게시글</h2>
           <ul>
             {recentPosts.map(
+              (data, index) =>
+                index < SITE.postPerIndex && <Card variant="h3" {...data} />
+            )}
+          </ul>
+        </section>
+      )
+    }
+    {
+      recentProjects.length > 0 && (
+        <section id="recent-posts" class="pt-12 pb-6">
+          <h2 class="text-2xl font-semibold tracking-wide">최근 프로젝트</h2>
+          <ul>
+            {recentProjects.map(
               (data, index) =>
                 index < SITE.postPerIndex && <Card variant="h3" {...data} />
             )}

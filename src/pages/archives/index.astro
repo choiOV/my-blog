@@ -14,6 +14,28 @@ if (!SITE.showArchives) {
 }
 
 const posts = await getCollection("blog", ({ data }) => !data.draft);
+const projects = await getCollection("projects", ({ data }) => !data.draft);
+
+const typedPosts = posts.map(p => ({
+  ...p,
+  data: { ...p.data, _type: "blog" },
+}));
+const typedProjects = projects.map(p => ({
+  ...p,
+  data: { ...p.data, _type: "project" },
+}));
+
+const combinedItems = [...typedPosts, ...typedProjects];
+
+const sorted = combinedItems.sort(
+  (a, b) =>
+    new Date(b.data.pubDatetime).getTime() -
+    new Date(a.data.pubDatetime).getTime()
+);
+
+const groupedByYear = getPostsByGroupCondition(sorted, item =>
+  new Date(item.data.pubDatetime).getFullYear()
+);
 
 const months = [
   "1월",
@@ -33,50 +55,40 @@ const months = [
 
 <Layout title={`아카이브 | ${SITE.title}`}>
   <Header />
-  <Main pageTitle="아카이브" pageDesc="지금까지 작성한 모든 글입니다.">
+  <Main
+    pageTitle="아카이브"
+    pageDesc="블로그의 글을 한 눈에 확인할 수 있습니다."
+  >
     {
-      Object.entries(
-        getPostsByGroupCondition(posts, post =>
-          post.data.pubDatetime.getFullYear()
-        )
-      )
-        .sort(([yearA], [yearB]) => Number(yearB) - Number(yearA))
-        .map(([year, yearGroup]) => (
-          <div>
-            <span class="text-2xl font-bold">{year}</span>
-            <sup class="text-sm">{yearGroup.length}</sup>
-            {Object.entries(
-              getPostsByGroupCondition(
-                yearGroup,
-                post => post.data.pubDatetime.getMonth() + 1
-              )
-            )
-              .sort(([monthA], [monthB]) => Number(monthB) - Number(monthA))
-              .map(([month, monthGroup]) => (
-                <div class="flex flex-col sm:flex-row">
-                  <div class="mt-6 min-w-36 text-lg sm:my-6">
-                    <span class="font-bold">{months[Number(month) - 1]}</span>
-                    <sup class="text-xs">{monthGroup.length}</sup>
-                  </div>
-                  <ul>
-                    {monthGroup
-                      .sort(
-                        (a, b) =>
-                          Math.floor(
-                            new Date(b.data.pubDatetime).getTime() / 1000
-                          ) -
-                          Math.floor(
-                            new Date(a.data.pubDatetime).getTime() / 1000
-                          )
-                      )
-                      .map(data => (
-                        <Card {...data} />
+      Object.entries(groupedByYear)
+        .sort(([a], [b]) => Number(b) - Number(a))
+        .map(([year, yearGroup]) => {
+          const groupedByMonth = getPostsByGroupCondition(
+            yearGroup,
+            item => new Date(item.data.pubDatetime).getMonth() + 1
+          );
+
+          return (
+            <div>
+              <h2 class="mt-10 text-2xl font-bold">{year}</h2>
+              {Object.entries(groupedByMonth)
+                .sort(([a], [b]) => Number(b) - Number(a))
+                .map(([month, monthGroup]) => (
+                  <div class="flex flex-col sm:flex-row">
+                    <div class="mt-6 min-w-36 text-lg sm:my-6">
+                      <span class="font-bold">{months[Number(month) - 1]}</span>
+                      <sup class="text-xs">{monthGroup.length}</sup>
+                    </div>
+                    <ul>
+                      {monthGroup.map(item => (
+                        <Card {...item} />
                       ))}
-                  </ul>
-                </div>
-              ))}
-          </div>
-        ))
+                    </ul>
+                  </div>
+                ))}
+            </div>
+          );
+        })
     }
   </Main>
   <Footer />

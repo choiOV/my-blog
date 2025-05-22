@@ -1,24 +1,35 @@
 ---
 const currentUrlPath = Astro.url.pathname.replace(/\/+$/, "");
-
 const breadcrumbList = currentUrlPath.split("/").slice(1);
 
-if (breadcrumbList[0] === "posts") {
-  breadcrumbList.splice(0, 2, `게시글 (페이지 ${breadcrumbList[1] || 1})`);
-}
-if (breadcrumbList[0] === "projects") {
-  breadcrumbList.splice(0, 2, `프로젝트 (페이지 ${breadcrumbList[1] || 1})`);
-}
-if (breadcrumbList[0] === "tags") {
-  breadcrumbList.splice(0, 2, "태그");
-}
+switch (breadcrumbList[0]) {
+  case "posts":
+    breadcrumbList.splice(0, 2, `게시글 (페이지 ${breadcrumbList[1] || 1})`);
+    break;
 
-if (breadcrumbList[0] === "tags" && !isNaN(Number(breadcrumbList[2]))) {
-  breadcrumbList.splice(
-    1,
-    3,
-    `${breadcrumbList[1]} ${Number(breadcrumbList[2]) === 1 ? "" : "(page " + breadcrumbList[2] + ")"}`
-  );
+  case "projects":
+    breadcrumbList.splice(0, 2, `프로젝트 (페이지 ${breadcrumbList[1] || 1})`);
+    break;
+
+  case "tags":
+    if (!isNaN(Number(breadcrumbList[2]))) {
+      breadcrumbList.splice(
+        1,
+        3,
+        `${breadcrumbList[1]} ${Number(breadcrumbList[2]) === 1 ? "" : "(page " + breadcrumbList[2] + ")"}`
+      );
+    } else {
+      breadcrumbList.splice(0, 2, "태그");
+    }
+    break;
+
+  case "archives":
+    breadcrumbList.splice(0, 2, "아카이브");
+    break;
+
+  case "search":
+    breadcrumbList.splice(0, 2, "검색");
+    break;
 }
 ---
 

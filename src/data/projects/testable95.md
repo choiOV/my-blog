@@ -7,8 +7,11 @@ slug: testable-95
 featured: true
 draft: false
 tags:
-  - project
-  - testable-95
+  - "Playwright"
+  - "E2E"
+  - "테스트 코드"
+  - "프로젝트"
+  - "팀 프로젝트"
 description: Playwright 기반 E2E 테스트 코드 생성기입니다.
 ---
 

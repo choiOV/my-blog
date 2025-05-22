@@ -12,11 +12,16 @@ import getPostsByTag from "@/utils/getPostsByTag";
 import { SITE } from "@/config";
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-  const posts = await getCollection("blog");
-  const tags = getUniqueTags(posts);
+  const collections = await Promise.all([
+    getCollection("blog"),
+    getCollection("projects"),
+  ]);
+
+  const entries = collections.flat();
+  const tags = getUniqueTags(entries);
 
   return tags.flatMap(({ tag, tagName }) => {
-    const tagPosts = getPostsByTag(posts, tag);
+    const tagPosts = getPostsByTag(entries, tag);
 
     return paginate(tagPosts, {
       params: { tag },
@@ -36,7 +41,7 @@ const { page, tagName } = Astro.props;
   <Main
     pageTitle={[`태그:`, `${tagName}`]}
     titleTransition={tag}
-    pageDesc={`"${tagName}" 태그를 사용중인 모든 게시글입니다.`}
+    pageDesc={`"${tagName}" 태그를 사용중인 모든 글입니다.`}
   >
     <h1 slot="title" transition:name={tag}>{`Tag:${tag}`}</h1>
     <ul>

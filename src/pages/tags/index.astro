@@ -8,9 +8,13 @@ import Footer from "@/components/Footer.astro";
 import getUniqueTags from "@/utils/getUniqueTags";
 import { SITE } from "@/config";
 
-const posts = await getCollection("blog");
+const collections = await Promise.all([
+  getCollection("blog"),
+  getCollection("projects"),
+]);
 
-let tags = getUniqueTags(posts);
+const entires = collections.flat();
+const tags = getUniqueTags(entires);
 ---
 
 <Layout title={`태그 | ${SITE.title}`}>

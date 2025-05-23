@@ -1,5 +1,5 @@
 export const SITE = {
-  website: "", // replace this with your deployed domain
+  website: "https://github.com/choiOV", // replace this with your deployed domain
   author: "choiOV",
   profile: "url",
   desc: "",
@@ -14,7 +14,7 @@ export const SITE = {
   editPost: {
     enabled: true,
     text: "수정 제안하기",
-    url: "",
+    url: "https://github.com/choiOV",
   },
   dynamicOgImage: true,
   lang: "en", // html lang code. Set this empty and default will be "en"

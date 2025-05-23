@@ -28,7 +28,8 @@ const recentProjects = sortedProjects.filter(({ data }) => data.featured);
   <main id="main-content" data-layout="index">
     <section id="hero" class="pt-8 pb-6">
       <h2 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-4xl">
-        기억을 믿지 말고, 기록을 믿어라.
+        기억을 믿지 말고, <br class="sm:hidden" />
+        기록을 믿어라.
       </h2>
       <a
         target="_blank"
@@ -46,8 +47,8 @@ const recentProjects = sortedProjects.filter(({ data }) => data.featured);
       </a>
 
       <p>
-        매일 배우고 지나치는 개념들을 기록하고, 다른 분들과 지식을 나누려
-        합니다. <br />
+        매일 배우고 지나치는 개념들을 기록하고, <br class="sm:hidden" />
+        다른 분들과 지식을 나누려 합니다. <br />
         의견과 피드백은 언제나 환영입니다. :)
       </p>
       {

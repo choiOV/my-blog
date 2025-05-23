@@ -7,12 +7,12 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Card from "@/components/Card.astro";
 import Pagination from "@/components/Pagination.astro";
-import getSortedPosts from "@/utils/getSortedPosts";
+import getSortedEntries from "@/utils/getSortedEntries";
 import { SITE } from "@/config";
 
 export const getStaticPaths = (async ({ paginate }) => {
   const posts = await getCollection("blog", ({ data }) => !data.draft);
-  return paginate(getSortedPosts(posts), { pageSize: SITE.postPerPage });
+  return paginate(getSortedEntries(posts), { pageSize: SITE.postPerPage });
 }) satisfies GetStaticPaths;
 
 const { page } = Astro.props;
@@ -25,7 +25,7 @@ const { page } = Astro.props;
     pageDesc="기록은 과거 정리가 아니라, 미래를 위한 준비다. — 작자 미상"
   >
     <ul>
-      {page.data.map(data => <Card {...data} />)}
+      {page.data.map(data => <Card entry={data} />)}
     </ul>
   </Main>
 

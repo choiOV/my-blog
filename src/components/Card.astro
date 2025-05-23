@@ -3,13 +3,15 @@ import { slugifyStr } from "@/utils/slugify";
 import type { CollectionEntry } from "astro:content";
 import { getPath } from "@/utils/getPath";
 import Datetime from "./Datetime.astro";
+import type { DataEntryMap } from "astro:content";
 
-export interface Props extends CollectionEntry<"blog"> {
+export interface Props<T extends keyof DataEntryMap> {
+  entry: CollectionEntry<T>;
   variant?: "h2" | "h3";
 }
 
-const { variant = "h2", data, id, filePath } = Astro.props;
-
+const { variant = "h2", entry } = Astro.props;
+const { id, filePath, data } = entry;
 const { title, description, pubDatetime, modDatetime, timezone } = data;
 
 const headerProps = {

@@ -1,8 +1,8 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 import ProjectDetails from "@/layouts/ProjectDetails.astro";
-import getSortedProjects from "@/utils/getSortedProjects";
 import { getPath } from "@/utils/getPath";
+import getSortedEntries from "@/utils/getSortedEntries";
 
 export interface Props {
   project: CollectionEntry<"projects">;
@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 const { project } = Astro.props;
 
 const projects = await getCollection("projects");
-const sortedProjects = getSortedProjects(projects);
+const sortedProjects = getSortedEntries(projects);
 ---
 
 <ProjectDetails project={project} projects={sortedProjects} />

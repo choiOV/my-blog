@@ -4,9 +4,10 @@ import type { CollectionEntry } from "astro:content";
 import IconArrowLeft from "@/assets/icons/IconArrowLeft.svg";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import LinkButton from "./LinkButton.astro";
+import type { DataEntryMap } from "astro:content";
 
-export interface Props {
-  page: Page<CollectionEntry<"blog">>;
+export interface Props<T extends keyof DataEntryMap> {
+  page: Page<CollectionEntry<T>>;
 }
 
 const { page } = Astro.props;

@@ -13,10 +13,11 @@ import { slugifyStr } from "@/utils/slugify";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
+import type { DataEntryMap } from "astro:content";
 
 export interface Props {
-  project: CollectionEntry<"projects">;
-  projects: CollectionEntry<"projects">[];
+  project: CollectionEntry<keyof DataEntryMap>;
+  projects: CollectionEntry<keyof DataEntryMap>[];
 }
 
 const { project, projects } = Astro.props;

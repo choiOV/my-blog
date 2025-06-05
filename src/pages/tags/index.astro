@@ -11,6 +11,7 @@ import { SITE } from "@/config";
 const collections = await Promise.all([
   getCollection("blog"),
   getCollection("projects"),
+  getCollection("books"),
 ]);
 
 const entires = collections.flat();

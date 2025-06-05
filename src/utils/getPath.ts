@@ -1,4 +1,4 @@
-import { BLOG_PATH, PROJECTS_PATH } from "@/content.config";
+import { BLOG_PATH, PROJECTS_PATH, BOOKS_PATH } from "@/content.config";
 import { slugifyStr } from "./slugify";
 
 export function getPath(
@@ -18,6 +18,11 @@ export function getPath(
     case filePath?.includes(PROJECTS_PATH):
       baseRemovedPath = filePath?.replace(PROJECTS_PATH, "");
       basePath = includeBase ? "/projects" : "";
+      break;
+
+    case filePath?.includes(BOOKS_PATH):
+      baseRemovedPath = filePath?.replace(BOOKS_PATH, "");
+      basePath = includeBase ? "/books" : "";
       break;
 
     default:

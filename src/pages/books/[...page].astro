@@ -1,0 +1,40 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import Main from "@/layouts/Main.astro";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Card from "@/components/Card.astro";
+import Pagination from "@/components/Pagination.astro";
+import getSortedBooks from "@/utils/getSortedBooks";
+
+import { SITE } from "@/config";
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const books = await getCollection("books", ({ data }) => {
+    return !data.draft;
+  });
+  return paginate(getSortedBooks(books), {
+    pageSize: SITE.postPerPage,
+  });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+---
+
+<Layout title={`독후감 | ${SITE.title}`}>
+  <Header />
+  <Main
+    pageTitle="독후감"
+    pageDesc="좋은 책을 읽는 것은 몇 세기의 훌륭한 사람들과 이야기를 나눈 것과 같다. — René Descartes"
+  >
+    <ul>
+      {page.data.map(data => <Card entry={data} />)}
+    </ul>
+  </Main>
+
+  <Pagination {page} />
+
+  <Footer noMarginTop={page.lastPage > 1} />
+</Layout>

@@ -11,6 +11,10 @@ switch (breadcrumbList[0]) {
     breadcrumbList.splice(0, 2, `프로젝트 (페이지 ${breadcrumbList[1] || 1})`);
     break;
 
+  case "books":
+    breadcrumbList.splice(0, 2, `독후감 (페이지 ${breadcrumbList[1] || 1})`);
+    break;
+
   case "tags":
     if (!isNaN(Number(breadcrumbList[2]))) {
       breadcrumbList.splice(

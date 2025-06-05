@@ -1,0 +1,29 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import { getPath } from "@/utils/getPath";
+import getSortedEntries from "@/utils/getSortedEntries";
+import BookDetails from "@/layouts/BookDetails.astro";
+
+export interface Props {
+  book: CollectionEntry<"books">;
+}
+
+export async function getStaticPaths() {
+  const books = await getCollection("books", ({ data }) => {
+    return !data.draft;
+  });
+  const booksResult = books.map(book => ({
+    params: { slug: getPath(book.id, book.filePath, false) },
+    props: { book },
+  }));
+
+  return booksResult;
+}
+
+const { book } = Astro.props;
+
+const books = await getCollection("books");
+const sortedBooks = getSortedEntries(books);
+---
+
+<BookDetails book={book} books={sortedBooks} />

@@ -15,6 +15,7 @@ if (!SITE.showArchives) {
 
 const posts = await getCollection("blog", ({ data }) => !data.draft);
 const projects = await getCollection("projects", ({ data }) => !data.draft);
+const books = await getCollection("books", ({ data }) => !data.draft);
 
 const typedPosts = posts.map(p => ({
   ...p,
@@ -24,8 +25,12 @@ const typedProjects = projects.map(p => ({
   ...p,
   data: { ...p.data, _type: "project" },
 }));
+const typedBooks = books.map(p => ({
+  ...p,
+  data: { ...p.data, _type: "book" },
+}));
 
-const combinedItems = [...typedPosts, ...typedProjects];
+const combinedItems = [...typedPosts, ...typedProjects, ...typedBooks];
 
 const sorted = combinedItems.sort(
   (a, b) =>

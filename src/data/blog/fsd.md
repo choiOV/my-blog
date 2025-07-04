@@ -13,7 +13,7 @@ tags:
 description: 기능 분할 설계에 대한 기술 아티클을 읽고 핵심만 요약 정리한 글입니다.
 ---
 
-<img src="/assets/fsd-intro.png" alt="기능 분할 설계 인트로 이미지" width="800" />
+<img src="/assets/fsd-intro.png" alt="기능 분할 설계 인트로 이미지" width="650" />
 
 <br>
 

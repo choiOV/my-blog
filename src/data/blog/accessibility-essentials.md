@@ -25,13 +25,13 @@ description: 접근성 필수 사항에 대한 기술 아티클을 읽고 핵심
 
 <br>
 
-1. [**시맨틱 HTML**](https://www.choiov-blog.site/posts/accessibility-essentials#시맨틱-html): 상호작용 및 기본 기능에 알맞은 요소를 사용해야 한다.
-2. [**폼**](https://www.choiov-blog.site/posts/accessibility-essentials#폼): 라벨과 구조를 간단히 만들어야 한다. (사용성 높임)
-3. [**키보드 내비게이션**](https://www.choiov-blog.site/posts/accessibility-essentials#키보드-내비게이션): 키보드를 사용해 쉽게 탐색 가능해야 한다.
-4. [**모달**](https://www.choiov-blog.site/posts/accessibility-essentials#모달): 많은 접근성 요구 사항이 있다.
-5. [**이미지 대체 텍스트**](https://www.choiov-blog.site/posts/accessibility-essentials#이미지-대체-텍스트): 더 나은 설명을 작성해야 한다. (이미지 접근성 높임)
-6. [**스타일링**](https://www.choiov-blog.site/posts/accessibility-essentials#스타일링): 포커스 표시기, 반응형 디자인, 애니메이션 최소화 (접근성 향상)
-7. [**ARIA 속성**](https://www.choiov-blog.site/posts/accessibility-essentials#aria-속성): ARIA 제대로된 사용법 (접근성 격차를 줄임)
+1. **시맨틱 HTML**: 상호작용 및 기본 기능에 알맞은 요소를 사용해야 한다.
+2. **폼**: 라벨과 구조를 간단히 만들어야 한다. (사용성 높임)
+3. **키보드 내비게이션**: 키보드를 사용해 쉽게 탐색 가능해야 한다.
+4. **모달**: 많은 접근성 요구 사항이 있다.
+5. **이미지 대체 텍스트**: 더 나은 설명을 작성해야 한다. (이미지 접근성 높임)
+6. **스타일링**: 포커스 표시기, 반응형 디자인, 애니메이션 최소화 (접근성 향상)
+7. **ARIA 속성**: ARIA 제대로된 사용법 (접근성 격차를 줄임)
 
 <br>
 

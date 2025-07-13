@@ -17,11 +17,11 @@ description: Playwright 기반 E2E 테스트 코드 생성기입니다.
 
 ### 배포 링크
 
-👉 [Testable 95 바로가기](https://testable95.co.kr/)
+<a href="https://testable95.co.kr/" target="_blank">Testable 95</a>
 
----
+<br>
 
 ### GitHub 레포지토리
 
-[testable95-client](https://github.com/loadify/testable95-client)  
-[testable95-server](https://github.com/loadify/testable95-server)
+<a href="https://github.com/loadify/testable95-client" target="_blank">testable95-client</a>  
+<a href="https://github.com/loadify/testable95-server" target="_blank">testable95-server</a>

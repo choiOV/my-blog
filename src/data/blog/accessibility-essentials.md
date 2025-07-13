@@ -17,7 +17,7 @@ description: 접근성 필수 사항에 대한 기술 아티클을 읽고 핵심
 
 <br>
 
-지금으로부터 다소 지난 일이지만, 함께 개발 공부를 하던 사람들과 페어 프로그래밍을 하던 중, 이미지 대체 텍스트는 단순히 이미지가 로드되지 않을 때를 대비하는 용도일 뿐만 아니라, 시각이 불편하신 분들을 위해서도 반드시 작성해야 하는 중요한 요소라는 점을 배웠었다. 이 계기로 “접근성”이란 개념에 대해 더 깊이 탐구하고자, [모든 프런트엔드 개발자가 알아야 할 접근성 필수 사항](https://velog.io/@eunbinn/accessibility-essentials-every-front-end-developer-should-know)이란 기술 아티클을 읽으면서 생소하거나 헷갈릴 수 있는 개념을 함께 정리해 “접근성”에 대한 이해를 높이고, 추후에 빠르게 참고하고 개발에도 적용할 수 있도록 나름대로 핵심 내용을 요약해 정리했음을 밝힌다.
+지금으로부터 다소 지난 일이지만, 함께 개발 공부를 하던 사람들과 페어 프로그래밍을 하던 중, 이미지 대체 텍스트는 단순히 이미지가 로드되지 않을 때를 대비하는 용도일 뿐만 아니라, 시각이 불편하신 분들을 위해서도 반드시 작성해야 하는 중요한 요소라는 점을 배웠었다. 이 계기로 “접근성”이란 개념에 대해 더 깊이 탐구하고자, <a href="https://velog.io/@eunbinn/accessibility-essentials-every-front-end-developer-should-know" target="_blank">모든 프런트엔드 개발자가 알아야 할 접근성 필수 사항</a>이란 기술 아티클을 읽으면서 생소하거나 헷갈릴 수 있는 개념을 함께 정리해 “접근성”에 대한 이해를 높이고, 추후에 빠르게 참고하고 개발에도 적용할 수 있도록 나름대로 핵심 내용을 요약해 정리했음을 밝힌다.
 
 (이 글은 노션에서 처음 작성되었으며, 노션의 원문 스타일이 네이버 블로그에 완전히 적용되지 않아, 일부 가독성이 떨어질 수 있는 점 양해 부탁드립니다.)
 
@@ -37,20 +37,20 @@ description: 접근성 필수 사항에 대한 기술 아티클을 읽고 핵심
 
 <br>
 
-[**접근성 원칙?**](https://www.w3.org/WAI/fundamentals/accessibility-principles/ko)
+<a href="https://www.w3.org/WAI/fundamentals/accessibility-principles/ko" target="_blank">접근성 원칙?</a>
 
 장애가 있는 사람을 포함해 **모든 사용자가 웹 콘텐츠와 서비스를 동등하게 이용할 수 있도록 보장하는
 기준**을 말한다. 대표적인 국제 표준은 **WCAG**(Web Content Accessibility Guidelines)이다.
 
 <br>
 
-**그렇다면, [접근성 기능](https://tech.kakaopay.com/post/accessibility-stories-for-everyone/#%EC%A0%91%EA%B7%BC%EC%84%B1%EC%9D%B4%EB%9E%80)이란 무엇일까?**
+**그렇다면, <a href="https://tech.kakaopay.com/post/accessibility-stories-for-everyone/#%EC%A0%91%EA%B7%BC%EC%84%B1%EC%9D%B4%EB%9E%80" target="_blank">접근성 기능</a>이란 무엇일까?**
 
 **스크린 리더, 키보드 탐색, 포커스 제어 등**을 지원해 “**모든”** 사용자가 서비스를 차별 없이 이용할 수있도록 하는 기능을 뜻한다. 현실을 예로 들자면, 휠체어를 위한 경사로, 레버형 손잡이를 예로 들 수 있다.
 
 <br>
 
-## [시맨틱 HTML](https://developer.mozilla.org/ko/docs/Glossary/Semantics#html_%EC%8B%9C%EB%A7%A8%ED%8B%B1)
+## <a href="https://developer.mozilla.org/ko/docs/Glossary/Semantics#html_%EC%8B%9C%EB%A7%A8%ED%8B%B1" target="_blank">시맨틱 HTML</a>
 
 시맨틱 HTML를 의도된 용도로 사용한다면, **브라우저와 도구가 페이지의 구조를 이해해 기본 제공하는 접근성에 대한 이점을
 얻을 수 있으며, SEO 또한 향상**시킨다.
@@ -64,9 +64,9 @@ description: 접근성 필수 사항에 대한 기술 아티클을 읽고 핵심
 
 <br>
 
-### [인터랙티브 요소](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#interactive_content)
+### <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#interactive_content" target="_blank">인터랙티브 요소</a>
 
-이 요소들은 기본적으로 [접근성 기능](https://www.notion.so/221981070d1180a2ad89f34c92a8d5a0?pvs=21)을 내장하고 있어, 시맨틱한 의미를 제공한다.
+이 요소들은 기본적으로 접근성 기능을 내장하고 있어, 시맨틱한 의미를 제공한다.
 
 웹 애플리케이션에서 흔히 볼 수 있는 안티패턴 중 하나는 **`<div>` 에 `onClick` 핸들러를 붙여 인터랙티브 요소처럼 사용하는 것이다**. 그러나 이 방법은 **키보드 접근성과 스크린 리더 지원이 부족하여 사용자 경험을 크게 해친다.**
 
@@ -84,7 +84,8 @@ description: 접근성 필수 사항에 대한 기술 아티클을 읽고 핵심
 
 네이티브 요소 역시 기본적인 접근성 기능을 갖추고 있어, **가능하면 그대로 사용하는 것이 가장 좋다.**
 
-하지만 별도의 맞춤형 컴포넌트를 만들고자 하는 경우 **[react-select](https://www.npmjs.com/package/react-select)와 같은 널리 사용되고 성숙한 라이브러리를 사용하는 걸
+하지만 별도의 맞춤형 컴포넌트를 만들고자 하는 경우 **<a href="https://www.npmjs.com/package/react-select" target="_blank">react-select</a>
+와 같은 널리 사용되고 성숙한 라이브러리를 사용하는 걸
 권장한다.** (네이티브 요소를 대체해 접근성을 갖추게 하는건 매우 어렵고 시간이 많이 걸린다.)
 
 <br>
@@ -96,7 +97,7 @@ HTML 명세에 정의되어 있고 **브라우저에서 기본 동작과 스타�
 
 <br>
 
-## [폼](https://developer.mozilla.org/ko/docs/Web/HTML/Reference/Elements/form)
+## <a href="https://developer.mozilla.org/ko/docs/Web/HTML/Reference/Elements/form" target="_blank">폼</a>
 
 **모든 폼 필드는 `onSubmit` 핸들러와 제출 버튼이 포함된 `<form>` 태그 내부에 존재해야 한다.**
 이렇게 해야 브라우저와 스크린 리더가 관련 필드를 올바르게 인식하고, Enter 키 제출, 모바일 키보드 등의 기본 동작도 제대로 동작해 접근성과 사용성 모두 향상된다.
@@ -109,7 +110,7 @@ HTML 명세에 정의되어 있고 **브라우저에서 기본 동작과 스타�
 
 <br>
 
-### [라벨](https://developer.mozilla.org/ko/docs/Web/HTML/Reference/Elements/label)
+### <a href="https://developer.mozilla.org/ko/docs/Web/HTML/Reference/Elements/label" target="_blank">라벨</a>
 
 **모든 입력 필드에는 용도를 설명하는 명확한 라벨이 필요하다.**
 따라서 **라벨은 `for` 속성(리액트: `htmlFor`)을 사용해 입력 필드의 `id`와 명시적으로 연결되어야 한다.**
@@ -123,7 +124,8 @@ HTML 명세에 정의되어 있고 **브라우저에서 기본 동작과 스타�
 <br>
 
 `for` 속성을 생략하고 `<label>` 요소에 함께 작성해 암시적으로 연결하는 것도 유효한 HTML이지만
-[지원하지 않는 스크린 리더가 존재하기에](https://www.tpgi.com/should-form-labels-be-wrapped-or-separate/) **`for` 속성 사용이 권장된다.**
+<a href="https://www.tpgi.com/should-form-labels-be-wrapped-or-separate/" target="_blank">지원하지 않는 스크린 리더가 존재하기에</a>
+**`for` 속성 사용이 권장된다.**
 
 ```jsx
 // 암시적 연결 예시
@@ -135,7 +137,7 @@ HTML 명세에 정의되어 있고 **브라우저에서 기본 동작과 스타�
 
 <br>
 
-### [플레이스홀더](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#placeholder)
+### <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#placeholder" target="_blank">플레이스홀더</a>
 
 **플레이스홀더는 라벨을 대체할 수 없다.**
 
@@ -157,11 +159,12 @@ HTML 명세에 정의되어 있고 **브라우저에서 기본 동작과 스타�
 
 <br>
 
-### [포커스 표시기](https://developer.mozilla.org/ko/docs/Web/CSS/:focus)
+### <a href="https://developer.mozilla.org/ko/docs/Web/CSS/:focus" target="_blank">포커스 표시기</a>
 
 **포커스 표시기는 키보드 탐색에 필수적이다. 포커스 표시기를 절대 완전히 비활성화 해선 안된다.**
 
-**[`:focus-visible`](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible) 선택자를 사용하면 필요할 때만 포커스 링이 표시되어,** 시각적 불편함 주지 않으면서 접근성을 유지할 수
+**<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible" target="_blank">:focus-visible</a>
+선택자를 사용하면 필요할 때만 포커스 링이 표시되어,** 시각적 불편함 주지 않으면서 접근성을 유지할 수
 있다. 커스텀 UI에선 시맨틱한 HTML과 숨겨진 라디오 버튼을 적절히 활용하면 접근성과 디자인을 모두 만족시킬 수 있다.
 
 <img src="/assets/accessibility-focus-indicator.gif" alt="" width="500" />
@@ -174,7 +177,9 @@ HTML 명세에 정의되어 있고 **브라우저에서 기본 동작과 스타�
 
 모달의 접근성을 보장하려면 **1. 포커스 관리, 2. 키보드 내비게이션, 3. 배경 콘텐츠 숨김이 중요하다.**
 
-가장 쉬운 방법은 시맨틱한 HTML인 [`<dialog>`](https://www.scottohara.me/blog/2023/01/26/use-the-dialog-element.html) 요소를 사용하는 것이며, [대부분의 브라우저에서 잘 지원되고](https://caniuse.com/dialog) 접근성 문제도
+가장 쉬운 방법은 시맨틱한 HTML인 <a href="https://www.scottohara.me/blog/2023/01/26/use-the-dialog-element.html" target="_blank">&lt;dialog&gt;</a>
+요소를 사용하는 것이며, <a href="https://caniuse.com/dialog" target="_blank">대부분의 브라우저에서 잘 지원되고</a>
+접근성 문제도
 (키보드 탐색 포함) 상당 부분 해결해준다.
 
 <br>
@@ -197,9 +202,10 @@ HTML 명세에 정의되어 있고 **브라우저에서 기본 동작과 스타�
    2. 포커스 트랩을 구현한다. (Tab키를 눌러도 모달 밖으로 포커스가 나가지 않도록.)
    3. 모달이 닫히면, 모달을 트리거한 요소로 **포커스를 반환**한다.
 
-   이외에도, [**react-focus-lock**](https://github.com/theKashey/react-focus-lock) 같은 라이브러리를 활용해도 좋다. (포커스 처리를 도와주는 `returnFocus` 옵션을 제공한다.)
+   이외에도, <a href="https://github.com/theKashey/react-focus-lock" target="_blank">react-focus-lock</a>
+   같은 라이브러리를 활용해도 좋다. (포커스 처리를 도와주는 `returnFocus` 옵션을 제공한다.)
 
-   <br>
+     <br>
 
    **참고**
 
@@ -210,7 +216,8 @@ HTML 명세에 정의되어 있고 **브라우저에서 기본 동작과 스타�
 2. **비활성 콘텐츠**
 
    모달이 열릴 때, 시각적으로는 가려져도 **스크린 리더는 배경 콘텐츠와 계속 상호작용할 수 있다.**
-   방지하고 싶다면, **배경 콘텐츠에 [inert](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inert) 속성을 적용해** 보조 기술에서 숨겨야 한다.
+   방지하고 싶다면, **배경 콘텐츠에 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inert" target="_blank">inert</a>
+   속성을 적용해** 보조 기술에서 숨겨야 한다.
 
 <br>
 
@@ -300,14 +307,16 @@ HTML 명세에 정의되어 있고 **브라우저에서 기본 동작과 스타�
 
 ## ARIA 속성
 
-[ARIA](https://developer.mozilla.org/ko/docs/Web/Accessibility/ARIA) 속성은 시맨틱 HTML로 부족할 때만 **신중히 사용해야 하는 보완 수단**이며, **잘못 사용할 경우 오히려 접근성을 해칠 수 있다.**
+<a href="https://developer.mozilla.org/ko/docs/Web/Accessibility/ARIA" target="_blank">ARIA</a>
+속성은 시맨틱 HTML로 부족할 때만 **신중히 사용해야 하는 보완 수단**이며, **잘못 사용할 경우 오히려 접근성을 해칠 수 있다.**
 
 <br>
 
 ### aria-label
 
 aria-label은 텍스트가 없는 **상호작용 요소에 접근 가능한 이름을 제공할 때 사용**하며**,**
-**비상호작용 요소에는 사용하지 말아야 한다.** ([사용할 경우 예상치 못한 성가신 알림을 받을 수 있다.](https://ericwbailey.website/published/aria-label-is-a-code-smell/#1.-aria-label%E2%80%99s-varied-support-when-declared-on-a-non-interactive-element))
+**비상호작용 요소에는 사용하지 말아야 한다.** (<a href="https://ericwbailey.website/published/aria-label-is-a-code-smell/#1.-aria-label%E2%80%99s-varied-support-when-declared-on-a-non-interactive-element" target="_blank">사용할 경우 예상치 못한 성가신 알림을 받을 수 있다.</a>
+)
 
 <br>
 
@@ -332,6 +341,6 @@ aria-hidden은 시각적으로는 보이지만 **스크린 리더에는 숨기�
 
 ## 같이 읽으면 좋을만한 사이트
 
-[카카오페이 기술 블로그 - 모두를 위한 접근성 이야기](https://tech.kakaopay.com/post/accessibility-stories-for-everyone/)
+<a href="https://tech.kakaopay.com/post/accessibility-stories-for-everyone/" target="_blank">카카오페이 기술 블로그 - 모두를 위한 접근성 이야기</a>
 
-[다양한 스크린 리더 사용자의 특성에 대해 더 알고 싶다면?](https://adrianroselli.com/2017/02/not-all-screen-reader-users-are-blind.html)
+<a href="https://adrianroselli.com/2017/02/not-all-screen-reader-users-are-blind.html" target="_blank">다양한 스크린 리더 사용자의 특성에 대해 더 알고 싶다면?</a>

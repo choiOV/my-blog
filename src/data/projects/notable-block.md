@@ -17,12 +17,12 @@ description: 블록체인 및 파일 확장 속성을 활용한 블록형 스마
 
 ### 배포 링크
 
-👉 [Notable Block 바로가기](https://notable-block.com/login)
+<a href="https://notable-block.com/login" target="_blank">Notable Block</a>
 
----
+<br>
 
 ### GitHub 레포지토리
 
-[notableBlock-client](https://github.com/notableBlock/notableBlock-client)  
-[notableBlock-server](https://github.com/notableBlock/notableBlock-server)  
-[notableBlock-blockchain](https://github.com/notableBlock/notableBlock-blockchain)
+<a href="https://github.com/notableBlock/notableBlock-client" target="_blank">notableBlock-client</a>  
+<a href="https://github.com/notableBlock/notableBlock-server" target="_blank">notableBlock-server</a>  
+<a href="https://github.com/notableBlock/notableBlock-blockchain" target="_blank">notableBlock-blockchain</a>

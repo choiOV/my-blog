@@ -6,6 +6,6 @@
   의견과 피드백은 언제나 환영입니다. :)
     </p>
 
-  <img src="./src/assets/images/hand-right.png" width="25" align="left">
-   <a href="https://www.choiov-blog.site/">블로그 방문하기</a>
+<a href="https://www.choiov-blog.site/">블로그 방문하기</a>
+
   </div>

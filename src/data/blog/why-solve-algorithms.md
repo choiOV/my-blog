@@ -1,7 +1,7 @@
 ---
 author: choiOV
-pubDatetime: 2025-07-13T13:00:00Z
-modDatetime: 2025-07-13T13:00:00Z
+pubDatetime: 2025-07-13T03:00:00Z
+modDatetime: 2025-07-13T03:00:00Z
 title: 알고리즘은 왜 푸는걸까?
 slug: why-solve-algorithms
 featured: false

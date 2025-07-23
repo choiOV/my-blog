@@ -22,7 +22,7 @@ const { page } = Astro.props;
   <Header />
   <Main
     pageTitle="게시글"
-    pageDesc="기록은 과거 정리가 아니라, 미래를 위한 준비다. — 작자 미상"
+    pageDesc="글쓰기는 자기 자신을 이해하려는 시도이자, 타인과 연결되기 위한 다리다. — 나탈리 골드버그"
   >
     <ul>
       {page.data.map(data => <Card entry={data} />)}

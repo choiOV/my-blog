@@ -1,7 +1,7 @@
 ---
 author: choiOV
-pubDatetime: 2025-07-24
-modDatetime: 2025-07-24
+pubDatetime: 2025-07-23T23:00:00Z
+modDatetime: 2025-07-23T23:00:00Z
 title: 요즘 우아한 개발
 slug: how-woowahan-develops-today
 featured: true
@@ -11,7 +11,7 @@ tags:
 description: 요즘 우아한 개발 독후감
 ---
 
-<img src="https://postfiles.pstatic.net/MjAyNTA3MjRfMjYg/MDAxNzUzMjk0NjQyODIz.HOL4LJZufDiWZruS1NlFM9rE903sv6KbGTMOdeMyOVwg.PRmco5TjPGKNS-ZL5F2V4uP8oH0txFCtykv3ivt6w08g.JPEG/%EC%9A%94%EC%A6%98%EC%9A%B0%EC%95%84%ED%95%9C%EA%B0%9C%EB%B0%9C.jpeg?type=w773" alt="요즘 우아한 개발 인증샷" width="400" />
+<img src="/assets/how-woowahan-develops-today-proof.jpeg" alt="요즘 우아한 개발 인증샷" width="400" />
 
 <a href="https://blog.naver.com/whatsoap0/223944878114" target="_blank">네이버 블로그</a><br>
 

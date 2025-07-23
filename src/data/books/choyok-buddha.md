@@ -1,7 +1,7 @@
 ---
 author: choiOV
-pubDatetime: 2025-06-21
-modDatetime: 2025-06-21
+pubDatetime: 2025-06-21T00:00:00Z
+modDatetime: 2025-06-21T00:00:00Z
 title: 초역 부처의 말
 slug: choyok-buddha
 featured: true
@@ -10,6 +10,10 @@ tags:
   - "독후감"
 description: 초역 부처의 말 독후감
 ---
+
+<img src="/assets/choyok-buddha-proof.jpeg" alt="초역 부처의 말" width="400" />
+
+<br>
 
 이 책을 읽게 된 계기는 몇 달 전 읽었던 책 <a href="https://search.shopping.naver.com/book/catalog/40502631625?query=%ED%95%84%EB%A7%81%20%EA%B7%B8%EB%A0%88%EC%9D%B4%ED%8A%B8&NaPm=ct%3Dmc5e0gh4%7Cci%3D3952c9c7f8c8f89df4c2d8c84b9c99f0725161f4%7Ctr%3Dboksl%7Csn%3D95694%7Chk%3D553b1398611889780df8e2819edc65c712f29867" target="_blank" rel="noopener noreferrer">필링 그레이트</a>의 소개 글 _우리 머릿속의 작디작은 생각의 조각이 우리가 세상을 보는 "틀"을 반영한다. 즉, "우리의 생각, 우리의 마음이 모든 것"이라는 불교의 철학과 일맥상통한다._ 라는 글이 감명 깊어 불교 관련 책을 읽어보고 싶다는 생각을 마음속 한편에 남겨두었다가 20대 초반에 만나 나에게 귀감이 되어주는 감사한 지인 중 <a href="https://blog.naver.com/kuksy77/223831934370?trackingCode=blog_bloghome_searchlist" target="_blank" rel="noopener noreferrer">한 사람의 후기</a>가 불씨가 되어 읽게 되었다.
 
@@ -52,9 +56,3 @@ _인내심을 가져라. 모든 것은 적당한 때에 결국 네게 올테니.
 언젠가 너는 네가 있어야 할 곳에서  
 너와 함께 할 운명인 사람과  
 네가 해야 할 일을 하며 살게 될 것이다._
-
-<br>
-
-<!-- ![초역 부처의 말](/assets/choyok-buddha.jpeg) -->
-
-<img src="/assets/choyok-buddha.jpeg" alt="초역 부처의 말" width="500" />

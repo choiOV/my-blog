@@ -15,12 +15,16 @@ import { SOCIALS } from "@/constants";
 
 const posts = await getCollection("blog");
 const projects = await getCollection("projects");
+const books = await getCollection("books");
 
 const sortedPosts = getSortedEntries(posts);
 const sortedProjects = getSortedEntries(projects);
+const sortedBooks = getSortedEntries(books);
+
 // const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 const recentProjects = sortedProjects.filter(({ data }) => data.featured);
+const recentBooks = sortedBooks.filter(({ data }) => data.featured);
 ---
 
 <Layout>
@@ -94,10 +98,23 @@ const recentProjects = sortedProjects.filter(({ data }) => data.featured);
     }
     {
       recentProjects.length > 0 && (
-        <section id="recent-posts" class="pt-12 pb-6">
+        <section id="recent-projects" class="pt-12 pb-6">
           <h2 class="text-2xl font-semibold tracking-wide">최근 프로젝트</h2>
           <ul>
             {recentProjects.map(
+              (data, index) =>
+                index < SITE.postPerIndex && <Card variant="h3" entry={data} />
+            )}
+          </ul>
+        </section>
+      )
+    }
+    {
+      recentBooks.length > 0 && (
+        <section id="recent-books" class="pt-12 pb-6">
+          <h2 class="text-2xl font-semibold tracking-wide">최근 독후감</h2>
+          <ul>
+            {recentBooks.map(
               (data, index) =>
                 index < SITE.postPerIndex && <Card variant="h3" entry={data} />
             )}

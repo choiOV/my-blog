@@ -56,8 +56,16 @@ const isActive = (path: string) => {
           aria-expanded="false"
           aria-controls="menu-items"
         >
-          <IconX id="close-icon" className="hidden" />
-          <IconMenuDeep id="menu-icon" />
+          {
+            typeof IconX === "function" && (
+              <IconX id="close-icon" className="hidden" />
+            )
+          }
+          {
+            typeof IconMenuDeep === "function" && (
+              <IconMenuDeep id="menu-icon" />
+            )
+          }
         </button>
         <ul
           id="menu-items"
@@ -105,7 +113,9 @@ const isActive = (path: string) => {
                   ariaLabel="archives"
                   title="아카이브"
                 >
-                  <IconArchive className="hidden sm:inline-block" />
+                  {typeof IconArchive === "function" && (
+                    <IconArchive className="hidden sm:inline-block" />
+                  )}
                   <span class="sm:sr-only">아카이브</span>
                 </LinkButton>
               </li>
@@ -121,7 +131,7 @@ const isActive = (path: string) => {
               ariaLabel="search"
               title="검색"
             >
-              <IconSearch />
+              {typeof IconSearch === "function" && <IconSearch />}
               <span class="sr-only">검색</span>
             </LinkButton>
           </li>
@@ -135,8 +145,12 @@ const isActive = (path: string) => {
                   aria-label="auto"
                   aria-live="polite"
                 >
-                  <IconMoon className="absolute top-[50%] left-[50%] -translate-[50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-                  <IconSunHigh className="absolute top-[50%] left-[50%] -translate-[50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+                  {typeof IconMoon === "function" && (
+                    <IconMoon className="absolute top-[50%] left-[50%] -translate-[50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+                  )}
+                  {typeof IconSunHigh === "function" && (
+                    <IconSunHigh className="absolute top-[50%] left-[50%] -translate-[50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+                  )}
                 </button>
               </li>
             )

@@ -5,6 +5,7 @@ import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import { SITE } from "./src/config";
 import svgr from "vite-plugin-svgr";
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,6 +14,7 @@ export default defineConfig({
     sitemap({
       filter: page => SITE.showArchives || !page.endsWith("/archives"),
     }),
+    react(),
   ],
   markdown: {
     remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of contents" }]],
@@ -23,7 +25,12 @@ export default defineConfig({
     },
   },
   vite: {
-    plugins: [tailwindcss(), svgr()],
+    plugins: [
+      tailwindcss(),
+      svgr({
+        include: "**/*.svg?react",
+      }),
+    ],
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
     },

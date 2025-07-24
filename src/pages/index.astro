@@ -8,8 +8,8 @@ import LinkButton from "@/components/LinkButton.astro";
 import Card from "@/components/Card.astro";
 import Hr from "@/components/Hr.astro";
 import getSortedEntries from "@/utils/getSortedEntries";
-import IconRss from "@/assets/icons/IconRss.svg";
-import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
+import IconRss from "@/assets/icons/IconRss.svg?react";
+import IconArrowRight from "@/assets/icons/IconArrowRight.svg?react";
 import { SITE } from "@/config";
 import { SOCIALS } from "@/constants";
 
@@ -44,7 +44,7 @@ const recentBooks = sortedBooks.filter(({ data }) => data.featured);
         <IconRss
           width={20}
           height={20}
-          class="scale-125 stroke-accent stroke-3"
+          className="scale-125 stroke-accent stroke-3"
         />
         <span class="sr-only">RSS Feed</span>
       </a>
@@ -126,7 +126,7 @@ const recentBooks = sortedBooks.filter(({ data }) => data.featured);
     <div class="my-8 text-center">
       <LinkButton href="/archives/">
         아카이브 보러가기
-        <IconArrowRight class="inline-block" />
+        <IconArrowRight className="inline-block" />
       </LinkButton>
     </div>
   </main>

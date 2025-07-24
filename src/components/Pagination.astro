@@ -1,8 +1,8 @@
 ---
 import type { Page } from "astro";
 import type { CollectionEntry } from "astro:content";
-import IconArrowLeft from "@/assets/icons/IconArrowLeft.svg";
-import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
+import IconArrowLeft from "@/assets/icons/IconArrowLeft.svg?react";
+import IconArrowRight from "@/assets/icons/IconArrowRight.svg?react";
 import LinkButton from "./LinkButton.astro";
 import type { DataEntryMap } from "astro:content";
 
@@ -22,7 +22,7 @@ const { page } = Astro.props;
         class:list={["mr-4 select-none", { "opacity-50": !page.url.prev }]}
         ariaLabel="Previous"
       >
-        <IconArrowLeft class="inline-block" />
+        <IconArrowLeft className="inline-block" />
         이전
       </LinkButton>
       {page.currentPage} / {page.lastPage}
@@ -33,7 +33,7 @@ const { page } = Astro.props;
         ariaLabel="Next"
       >
         다음
-        <IconArrowRight class="inline-block" />
+        <IconArrowRight className="inline-block" />
       </LinkButton>
     </nav>
   )

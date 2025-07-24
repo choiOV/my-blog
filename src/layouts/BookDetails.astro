@@ -10,8 +10,8 @@ import ShareLinks from "@/components/ShareLinks.astro";
 import BackButton from "@/components/BackButton.astro";
 import { getPath } from "@/utils/getPath";
 import { slugifyStr } from "@/utils/slugify";
-import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
-import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
+import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg?react";
+import IconChevronRight from "@/assets/icons/IconChevronRight.svg?react";
 import { SITE } from "@/config";
 import type { DataEntryMap } from "astro:content";
 
@@ -119,7 +119,7 @@ const nextBook =
         id="back-to-top"
         class="focus-outline py-1 whitespace-nowrap hover:opacity-75"
       >
-        <IconChevronLeft class="inline-block rotate-90" />
+        <IconChevronLeft className="inline-block rotate-90" />
         <span>위로가기</span>
       </button>
     </div>
@@ -134,7 +134,7 @@ const nextBook =
             href={`/books/${prevBook.slug}`}
             class="flex w-full gap-1 hover:opacity-75"
           >
-            <IconChevronLeft class="inline-block flex-none" />
+            <IconChevronLeft className="inline-block flex-none" />
             <div>
               <span>이전 독후감</span>
               <div class="text-sm text-accent/85">{prevBook.title}</div>
@@ -152,7 +152,7 @@ const nextBook =
               <span>다음 독후감</span>
               <div class="text-sm text-accent/85">{nextBook.title}</div>
             </div>
-            <IconChevronRight class="inline-block flex-none" />
+            <IconChevronRight className="inline-block flex-none" />
           </a>
         )
       }

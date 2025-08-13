@@ -17,7 +17,7 @@ description: Playwright 기반 E2E 테스트 코드 생성기입니다.
 
 ### 배포 링크
 
-<a href="https://testable95.co.kr/" target="_blank">Testable 95</a>
+<a href="https://testable95.site/" target="_blank">Testable 95</a>
 
 <br>
 

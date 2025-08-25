@@ -1,7 +1,7 @@
 ---
 author: choiOV
-pubDatetime: 2025-08-26T00:00:00Z
-modDatetime: 2025-08-26T00:00:00Z
+pubDatetime: 2025-08-25T18:00:00Z
+modDatetime: 2025-08-25T18:00:00Z
 title: 지우개
 slug: eraser
 featured: false

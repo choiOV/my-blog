@@ -21,10 +21,9 @@ const sortedPosts = getSortedEntries(posts);
 const sortedProjects = getSortedEntries(projects);
 const sortedBooks = getSortedEntries(books);
 
-// const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
-const recentProjects = sortedProjects.filter(({ data }) => data.featured);
-const recentBooks = sortedBooks.filter(({ data }) => data.featured);
+const featuredPosts = sortedPosts.filter(({ data }) => !data.featured);
+const featuredProjects = sortedProjects.filter(({ data }) => data.featured);
+const featuredBooks = sortedBooks.filter(({ data }) => data.featured);
 ---
 
 <Layout>
@@ -78,17 +77,17 @@ const recentBooks = sortedBooks.filter(({ data }) => data.featured);
               ))}
             </ul>
           </section>
-          {recentPosts.length > 0 && <Hr />}
+          {featuredPosts.length > 0 && <Hr />}
         </>
       )
     } -->
 
     {
-      recentPosts.length > 0 && (
+      featuredPosts.length > 0 && (
         <section id="recent-posts" class="pt-12 pb-6">
-          <h2 class="text-2xl font-semibold tracking-wide">최근 게시글</h2>
+          <h2 class="text-2xl font-semibold tracking-wide">주요 게시글</h2>
           <ul>
-            {recentPosts.map(
+            {featuredPosts.map(
               (data, index) =>
                 index < SITE.postPerIndex && <Card variant="h3" entry={data} />
             )}
@@ -97,11 +96,11 @@ const recentBooks = sortedBooks.filter(({ data }) => data.featured);
       )
     }
     {
-      recentProjects.length > 0 && (
+      featuredProjects.length > 0 && (
         <section id="recent-projects" class="pt-12 pb-6">
-          <h2 class="text-2xl font-semibold tracking-wide">최근 프로젝트</h2>
+          <h2 class="text-2xl font-semibold tracking-wide">주요 프로젝트</h2>
           <ul>
-            {recentProjects.map(
+            {featuredProjects.map(
               (data, index) =>
                 index < SITE.postPerIndex && <Card variant="h3" entry={data} />
             )}
@@ -110,11 +109,11 @@ const recentBooks = sortedBooks.filter(({ data }) => data.featured);
       )
     }
     {
-      recentBooks.length > 0 && (
+      featuredBooks.length > 0 && (
         <section id="recent-books" class="pt-12 pb-6">
-          <h2 class="text-2xl font-semibold tracking-wide">최근 독후감</h2>
+          <h2 class="text-2xl font-semibold tracking-wide">주요 독후감</h2>
           <ul>
-            {recentBooks.map(
+            {featuredBooks.map(
               (data, index) =>
                 index < SITE.postPerIndex && <Card variant="h3" entry={data} />
             )}

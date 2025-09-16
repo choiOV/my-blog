@@ -15,7 +15,6 @@ description: 험블 객체 패턴을 이용해 테스트와 프로그램 코드�
 
 <!-- toc -->
 
-- [개요](#%EA%B0%9C%EC%9A%94)
 - [테스트가 어려운 이유는 충분히 고민하지 않았기 때문이다.](#%ED%85%8C%EC%8A%A4%ED%8A%B8%EA%B0%80-%EC%96%B4%EB%A0%A4%EC%9A%B4-%EC%9D%B4%EC%9C%A0%EB%8A%94-%EC%B6%A9%EB%B6%84%ED%9E%88-%EA%B3%A0%EB%AF%BC%ED%95%98%EC%A7%80-%EC%95%8A%EC%95%98%EA%B8%B0-%EB%95%8C%EB%AC%B8%EC%9D%B4%EB%8B%A4)
 - [Mock 피라미드](#mock-%ED%94%BC%EB%9D%BC%EB%AF%B8%EB%93%9C)
 - [험블 객체 패턴을 사용해 해결하자 (Feat. 다형성)](#%ED%97%98%EB%B8%94-%EA%B0%9D%EC%B2%B4-%ED%8C%A8%ED%84%B4%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%B4-%ED%95%B4%EA%B2%B0%ED%95%98%EC%9E%90-feat-%EB%8B%A4%ED%98%95%EC%84%B1)

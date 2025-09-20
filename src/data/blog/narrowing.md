@@ -9,7 +9,7 @@ draft: false
 tags:
   - 타입스크립트
   - 핸드북 Narrowing
-description: 타입스크립트 핸드북 Narrowing를 읽고 스터디 발표를 위해 정리한 글입니다.
+description: 타입스크립트 핸드북 Narrowing을 읽고 스터디 발표를 위해 정리한 글입니다.
 ---
 
 ### 목차

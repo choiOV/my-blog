@@ -23,7 +23,7 @@ description: 타입스크립트 핸드북 Everyday Types를 읽고 스터디 발
 
 <br>
 
-<img src="/assets/everyday-types-intro.png" alt="Everyday Types 인트로 이미지" width="650" />
+<img src="/assets/everyday-types/intro.png" alt="Everyday Types 인트로 이미지" width="650" />
 
 <br>
 

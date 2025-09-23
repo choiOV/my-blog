@@ -13,7 +13,7 @@ tags:
 description: 접근성 필수 사항에 대한 기술 아티클을 읽고 핵심만 요약 정리한 글입니다.
 ---
 
-<img src="/assets/accessibility-intro.png" alt="기능 분할 설계 인트로 이미지" width="650" />
+<img src="/assets/accessibility/intro.png" alt="기능 분할 설계 인트로 이미지" width="650" />
 
 <br>
 
@@ -104,7 +104,7 @@ HTML 명세에 정의되어 있고 **브라우저에서 기본 동작과 스타�
 
 <br>
 
-<img src="/assets/accessibility-form-field-jumping.gif" alt="" width="300" />
+<img src="/assets/accessibility/form-field-jumping.gif" alt="" width="300" />
 
 <p align="center">모바일 환경에서 필드 간 이동하는 예시</p>
 
@@ -144,7 +144,7 @@ HTML 명세에 정의되어 있고 **브라우저에서 기본 동작과 스타�
 더불어서, 플레이스홀더는 입력 이벤트가 발생하면 사라지는 특성으로 인해 사용자에게 혼란을 줄 수 있고, 식별 문제, 시인성이
 떨어지는 문제 등이 있다. 따라서 **가급적 최소한으로 활용**하고, **항상 적절한 `<label>`을 사용하는걸 권장한다.**
 
-<img src="/assets/accessibility-placeholder.png" alt="플레이스홀더 예시 이미지" width="650" />
+<img src="/assets/accessibility/placeholder.png" alt="플레이스홀더 예시 이미지" width="650" />
 
 두 양식 모두 작성되지 않았으나, 왼쪽의 경우 플레이스홀더로 인해 작성 여부를 명확히 식별하기 어렵다.
 
@@ -167,7 +167,7 @@ HTML 명세에 정의되어 있고 **브라우저에서 기본 동작과 스타�
 선택자를 사용하면 필요할 때만 포커스 링이 표시되어,** 시각적 불편함 주지 않으면서 접근성을 유지할 수
 있다. 커스텀 UI에선 시맨틱한 HTML과 숨겨진 라디오 버튼을 적절히 활용하면 접근성과 디자인을 모두 만족시킬 수 있다.
 
-<img src="/assets/accessibility-focus-indicator.gif" alt="" width="500" />
+<img src="/assets/accessibility/focus-indicator.gif" alt="" width="500" />
 
 <p align="center">포커스 표시기를 사용해 폼 필드를 순차적으로 이동하는 모습</p>
 
@@ -277,7 +277,7 @@ HTML 명세에 정의되어 있고 **브라우저에서 기본 동작과 스타�
 버튼과 링크는 **마우스나 터치로 쉽게 클릭할 수 있도록 충분한 크기의 클릭 영역을 가져야 한다.**
 패딩을 추가하거나, 필요 시 음수 마진을 사용해 간단히 구현할 수 있다.
 
-<img src="/assets/accessibility-styling.png" alt="" width="400" />
+<img src="/assets/accessibility/styling.png" alt="" width="400" />
 
 모달 닫기 버튼의 클릭 가능한 영역을 보여주는 좌우 비교.
 

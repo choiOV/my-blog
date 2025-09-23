@@ -11,7 +11,7 @@ tags:
 description: 알고리즘의 역사와 풀게 된 이유에 대해 고찰한 글입니다.
 ---
 
-<img src="/assets/why-solve-algorithms-intro.png" alt="알고리즘은 왜 푸는걸까?(알콰리즈미, 개인의 관점, 기업의 관점) 이미지" width="650" />
+<img src="/assets/why-solve-algorithms/intro.png" alt="알고리즘은 왜 푸는걸까?(알콰리즈미, 개인의 관점, 기업의 관점) 이미지" width="650" />
 
 매일 알고리즘을 풀던 중, 물리학자 김상욱 교수의 말 중
 <a href="https://youtu.be/s4p0vrFDb0k?si=lGauADtdf4XGllJU&t=634" target="_blank">역사를 알면 더 꾸준히 할 수 있다는 말(10:34~12:07)</a>이 떠올라 곧바로 행동으로 옮겨, **알고리즘의 역사를 이해하고, 왜 알고리즘 문제를 푸는지, 실력은 어떻게 키울 수 있는지 등을 조사해 다른 사람들과 공유하고자 이 글을 쓰게 되었다.**

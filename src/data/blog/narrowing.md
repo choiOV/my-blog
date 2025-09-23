@@ -34,7 +34,7 @@ description: 타입스크립트 핸드북 Narrowing을 읽고 스터디 발표�
 
 <br>
 
-<img src="/assets/narrowing/narrowing-intro.png" alt="Narrowing 인트로 이미지" width="650" />
+<img src="/assets/narrowing/intro.png" alt="Narrowing 인트로 이미지" width="650" />
 
 <br>
 
@@ -82,7 +82,7 @@ function format(v: string | number) {
 - **정답**
   **⇒ 2번**
   `typeof`는 타입 가드로 동작하여 분기 내부에서 `number`로 좁혀진다.
-  <img src="/assets/narrowing/narrowing-q2.png" alt="" />
+  <img src="/assets/narrowing/q2.png" alt="" />
 
 <br>
 
@@ -110,7 +110,7 @@ function greet(name?: string) {
   **⇒ 2, 3번**
   `""`와 `undefined`는 falsy. `"0"`(문자열)은 truthy이다.
   ※ 빈 문자열 누락 위험을 항상 염두!
-  <img src="/assets/narrowing/narrowing-q3.png" alt="" />
+  <img src="/assets/narrowing/q3.png" alt="" />
 
 <br>
 
@@ -137,7 +137,7 @@ function same(x: string | number, y: string | boolean) {
 - **정답**
   **⇒ 1번**
   공통 가능 타입은 `string` 뿐이라 두 값 모두 `string`으로 좁혀진다.
-  <img src="/assets/narrowing/narrowing-q4-1.png" alt="" />
+  <img src="/assets/narrowing/q4-1.png" alt="" />
 
 <br>
 
@@ -151,7 +151,7 @@ function same(x: string | number, y: string | boolean) {
 - **정답**
   **⇒ O**
   [느슨한 비교(부등 연산자)](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Inequality) `!=`는 `null | undefined` 동시 제거에 유용하다.
-  <img src="/assets/narrowing/narrowing-q4-2.png" alt="" />
+  <img src="/assets/narrowing/q4-2.png" alt="" />
 
 <br>
 
@@ -187,8 +187,8 @@ function speak(a: Cat | Dog | Human) {
   `Human`의 `meow?`는 선택적이라 **있을 수도/없을 수도** 있음 →
   `"meow" in a`가 참이면 `Cat | Human`, 거짓이면 `Dog | Human`가 남는다.
   (선택적 프로퍼티(`?`)가 있는 타입은 양쪽 분기에 모두 남을 수 있음)
-  <img src="/assets/narrowing/narrowing-q5-1.png" alt="" />
-  <img src="/assets/narrowing/narrowing-q5-2.png" alt="" />
+  <img src="/assets/narrowing/q5-1.png" alt="" />
+  <img src="/assets/narrowing/q5-2.png" alt="" />
 
 <br>
 
@@ -216,7 +216,7 @@ function info(x: Date | URL) {
 - **정답**
   **⇒ 2번**
   `instanceof`는 해당 생성자의 프로토타입 체인을 따라 타입을 좁혀준다.
-  <img src="/assets/narrowing/narrowing-q6.png" alt="" />
+  <img src="/assets/narrowing/q6.png" alt="" />
 
 <br>
 
@@ -239,7 +239,7 @@ v = "bye"; // 지금 관찰되는 타입은?
 
 - **정답**
   **⇒ 1번**
-  <img src="/assets/narrowing/narrowing-q7-1.png" alt="" />
+  <img src="/assets/narrowing/q7-1.png" alt="" />
   해설은 보너스 문제와 함께
 
 **Q7-보너스.** 마지막 v는 타입 에러가 발생할까? 이유도 함께 말씀해주세요
@@ -259,7 +259,7 @@ v = true; // 타입 에러가 발생할까?
 - **정답**
   **⇒ O**
   `boolean`이 `string | number` 타입에 포함되지 않으므로 오류가 발생한다.
-  <img src="/assets/narrowing/narrowing-q7-2.png" alt="" />
+  <img src="/assets/narrowing/q7-2.png" alt="" />
   해설: 현재 값에 의해 순간적으로 타입은 좁혀 보이지만, 결국 넣을 수 있는 값의 범위는 처음 선언된 타입(`string | number`)에 의해 결정된다.
 
 <br>
@@ -331,8 +331,8 @@ if (isOk(something)) {
   사용자 정의 타입 가드(`v is { ok: true }`) 덕분에
   `isOk(something)`이 `true`일 때는 타입이 `{ ok: true }`로 좁혀지고,
   `false`일 때는 원래 타입인 `unknown`으로 남는다.
-  <img src="/assets/narrowing/narrowing-q9-1.png" alt="" />
-  <img src="/assets/narrowing/narrowing-q9-2.png" alt="" />
+  <img src="/assets/narrowing/q9-1.png" alt="" />
+  <img src="/assets/narrowing/q9-2.png" alt="" />
 
 <br>
 
@@ -369,7 +369,7 @@ function login(l: Login) {
   유니언 타입의 모든 멤버가 **공통 필드(discriminant)**를 가진 경우 동작함
   그 공통 필드에 리터럴 타입 값(예제에선 `type:` 필드)이 들어가면,
   타입스크립트는 `if`나 `switch` 조건 검사에 따라 자동으로 타입을 좁혀줌
-  <img src="/assets/narrowing/narrowing-q10.png" alt="" />
+  <img src="/assets/narrowing/q10.png" alt="" />
 
 ### 11. `never` & Exhaustiveness Checking (`never` 타입 & 빠짐없이 검사하기)
 
@@ -401,7 +401,7 @@ function speak(a: Animal) {
 - **정답**
   **⇒ 2번**
   새로운 멤버가 추가되면, 아직 처리되지 않은 타입이 남기 때문에 `a`가 `never`가 될 수 없어 에러로 경고한다
-  <img src="/assets/narrowing/narrowing-q11.png" alt="" />
+  <img src="/assets/narrowing/q11.png" alt="" />
 
 <br>
 
@@ -433,7 +433,7 @@ const card: Pay = { method: "card" };
      | { method: "cash"; amount: number };
    ```
 
-<img src="/assets/narrowing/narrowing-q12-1.png" alt="" />
+<img src="/assets/narrowing/q12-1.png" alt="" />
 
 <br>
 
@@ -454,4 +454,4 @@ interface CashPay {
 type Pay = CardPay | CashPay;
 ```
 
-<img src="/assets/narrowing/narrowing-q12-2.png" alt="" />
+<img src="/assets/narrowing/q12-2.png" alt="" />

@@ -13,7 +13,7 @@ tags:
 description: 기능 분할 설계에 대한 기술 아티클을 읽고 핵심만 요약 정리한 글입니다.
 ---
 
-<img src="/assets/fsd-intro.png" alt="기능 분할 설계 인트로 이미지" width="650" />
+<img src="/assets/fsd/intro.png" alt="기능 분할 설계 인트로 이미지" width="650" />
 
 <br>
 
@@ -34,7 +34,7 @@ description: 기능 분할 설계에 대한 기술 아티클을 읽고 핵심만
 
 기능 분할 설계는 크게 **레이어, 슬라이스, 세그먼트** 총 세 가지로 나눌 수 있다.
 
-<img src="/assets/fsd-layer-slice-segment.png" alt="기능 분할 설계 정리(레이어, 슬라이스, 세그먼트) 이미지" width="800" />
+<img src="/assets/fsd/layer-slice-segment.png" alt="기능 분할 설계 정리(레이어, 슬라이스, 세그먼트) 이미지" width="800" />
 
 <br>
 

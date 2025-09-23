@@ -11,7 +11,7 @@ tags:
 description: 초역 부처의 말 독후감
 ---
 
-<img src="/assets/choyok-buddha-proof.jpeg" alt="초역 부처의 말" width="400" />
+<img src="/assets/choyok-buddha/proof.jpeg" alt="초역 부처의 말" width="400" />
 
 <br>
 

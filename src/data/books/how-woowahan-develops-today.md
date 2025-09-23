@@ -11,7 +11,7 @@ tags:
 description: 요즘 우아한 개발 독후감
 ---
 
-<img src="/assets/how-woowahan-develops-today-proof.jpeg" alt="요즘 우아한 개발 인증샷" width="400" />
+<img src="/assets/how-woowahan-develops-today/proof.jpeg" alt="요즘 우아한 개발 인증샷" width="400" />
 
 <br>
 

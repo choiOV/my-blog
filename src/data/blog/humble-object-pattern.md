@@ -24,7 +24,7 @@ description: 험블 객체 패턴을 이용해 테스트와 프로그램 코드�
 
 <br>
 
-<img src="/assets/humble-object-pattern-intro.png" alt="험블 객체 패턴 인트로" width="650" />
+<img src="/assets/humble-object-pattern/intro.png" alt="험블 객체 패턴 인트로" width="650" />
 
 <br>
 
@@ -59,7 +59,7 @@ description: 험블 객체 패턴을 이용해 테스트와 프로그램 코드�
 
 또한 고수준 목을 많이 사용할수록 테스트 작성은 어려워진다.
 
-![Mock 피라미드](/assets/humble-object-pattern-mock-pyramid.png)
+![Mock 피라미드](/assets/humble-object-pattern/mock-pyramid.png)
 
 각 목에 대해 간단하게 설명하자면 아래와 같다.
 

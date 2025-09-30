@@ -18,6 +18,20 @@ description: 자바스크립트에서 긴 작업을 나누어 처리하는 다�
 
 <!-- toc -->
 
+- [목차](#목차)
+- [개요](#개요)
+- [문제 상황](#문제-상황)
+- [**#1. setTimeout() + 재귀 호출**](#1-settimeout--재귀-호출)
+- [**#2. Async/Await \& 타임아웃**](#2-asyncawait--타임아웃)
+- [**#3. scheduler.postTask()**](#3-schedulerposttask)
+- [**#4. scheduler.yield()**](#4-scheduleryield)
+- [**#5. requestAnimationFrame()**](#5-requestanimationframe)
+- [**#6. MessageChannel()**](#6messagechannel)
+- [**#7. 웹 워커(Web Workers)**](#7웹-워커web-workers)
+- [어떻게 선택해야 할까?](#어떻게-선택해야-할까)
+
+<!-- tocstop -->
+
 <br>
 
 <img src="/assets/breaking-up-long-tasks-in-javascript/intro.png" alt="기능 분할 설계 인트로 이미지" width="650" />
@@ -192,7 +206,7 @@ processItems(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]);
 
 <br>
 
-### #3. scheduler.postTask()
+### **#3. scheduler.postTask()**
 
 `scheduler.postTask()`는 크로미움 브라우저에서 지원되는 새로운 스케줄링 API로, 기존 `setTimeout(…, 0)`보다 안정적이고 효율적으로 작업을 분산할 수 있다.
 

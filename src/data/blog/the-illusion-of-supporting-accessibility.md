@@ -1,7 +1,7 @@
 ---
 author: choiOV
-pubDatetime: 2025-09-30T15:43:00.000Z
-modDatetime: 2025-09-30T15:43:00.000Z
+pubDatetime: 2025-09-30T14:00:00.000Z
+modDatetime: 2025-09-30T14:00:00.000Z
 title: 접근성을 지원한다는 착각
 slug: the-illusion-of-supporting-accessibility
 featured: true

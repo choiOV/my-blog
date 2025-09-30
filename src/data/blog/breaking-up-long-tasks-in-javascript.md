@@ -34,7 +34,7 @@ description: 자바스크립트에서 긴 작업을 나누어 처리하는 다�
 
 <br>
 
-<img src="/assets/breaking-up-long-tasks-in-javascript/intro.png" alt="기능 분할 설계 인트로 이미지" width="650" />
+<img src="/assets/breaking-up-long-tasks-in-javascript/intro.png" alt="자바스크립트에서 긴 작업을 분할하는 다양한 방법 인트로 이미지" width="650" />
 
 <br>
 

@@ -1,7 +1,7 @@
 ---
 author: choiOV
-pubDatetime: 2025-10-21T07:00:16.000Z
-modDatetime: 2025-10-21T07:00:16.000Z
+pubDatetime: 2025-10-21T00:16:00.000Z
+modDatetime: 2025-10-21T00:16:00.000Z
 title: Container/Presentational 패턴
 slug: presentational-and-container-components
 featured: false

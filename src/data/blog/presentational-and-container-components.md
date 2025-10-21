@@ -9,7 +9,7 @@ draft: false
 tags:
   - 리액트 디자인 패턴
   - 관심사의 분리 원칙
-description: Container/Presentational 패턴애 대해 고찰한 글입니다.
+description: Container/Presentational 패턴에 대해 고찰한 글입니다.
 ---
 
 <br>

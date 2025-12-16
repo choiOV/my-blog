@@ -21,7 +21,7 @@ const sortedPosts = getSortedEntries(posts);
 const sortedProjects = getSortedEntries(projects);
 const sortedBooks = getSortedEntries(books);
 
-const featuredPosts = sortedPosts.filter(({ data }) => !data.featured);
+const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const featuredProjects = sortedProjects.filter(({ data }) => data.featured);
 const featuredBooks = sortedBooks.filter(({ data }) => data.featured);
 ---

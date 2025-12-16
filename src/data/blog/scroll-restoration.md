@@ -4,7 +4,7 @@ pubDatetime: 2025-10-14T13:43:00.000Z
 modDatetime: 2025-10-14T13:43:00.000Z
 title: 프론트엔드 개발자를 위한 5가지 스크롤 복구 시나리오와 실전 코드
 slug: scroll-restoration
-featured: true
+featured: false
 draft: false
 tags:
   - UI / UX

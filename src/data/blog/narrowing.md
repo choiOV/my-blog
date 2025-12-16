@@ -4,7 +4,7 @@ pubDatetime: 2025-09-20T07:15:00.000Z
 modDatetime: 2025-09-20T07:15:00.000Z
 title: 타입스크립트 핸드북 - Narrowing
 slug: narrowing
-featured: true
+featured: false
 draft: false
 tags:
   - 타입스크립트

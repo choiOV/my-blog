@@ -3,7 +3,7 @@ author: choiOV
 pubDatetime: 2025-12-16T00:00:00.000Z
 title: "아니요, React Context는 너무 많은 렌더링을 유발하지 않습니다"
 slug: react-context-renders
-featured: true
+featured: false
 draft: false
 tags:
   - React

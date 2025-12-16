@@ -4,12 +4,12 @@ pubDatetime: 2025-09-30T14:00:00.000Z
 modDatetime: 2025-09-30T14:00:00.000Z
 title: 접근성을 지원한다는 착각
 slug: the-illusion-of-supporting-accessibility
-featured: true
+featured: false
 draft: false
 tags:
   - UI/UX
   - 웹 접근성
-description: 접근성은 “지원”이 아니라 “필수”다.
+description: 접근성은 "지원"이 아니라 "필수"다.
 ---
 
 ### 목차

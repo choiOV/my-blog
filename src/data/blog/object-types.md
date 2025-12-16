@@ -4,7 +4,7 @@ pubDatetime: 2025-10-18T17:00:00.000Z
 modDatetime: 2025-10-18T17:00:00.000Z
 title: 타입스크립트 핸드북 - Object Types
 slug: object-types
-featured: true
+featured: false
 draft: false
 tags:
   - 타입스크립트

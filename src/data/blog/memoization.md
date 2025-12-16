@@ -4,7 +4,7 @@ pubDatetime: 2025-08-30T17:00:00Z
 modDatetime: 2025-08-30T17:00:00Z
 title: React.memo 완벽 해부 언제 쓸모 있고 언제 쓸모없는가
 slug: memoization
-featured: true
+featured: false
 draft: false
 tags:
   - 메모이제이션

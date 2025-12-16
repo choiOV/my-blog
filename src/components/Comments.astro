@@ -1,0 +1,78 @@
+---
+import { SITE } from "@/config";
+
+const { giscus } = SITE;
+
+// Giscus 비활성화 시 컴포넌트 렌더링 안 함
+if (!giscus.enabled) {
+  return null;
+}
+---
+
+<div class="mt-8" data-pagefind-ignore>
+  <script
+    src="https://giscus.app/client.js"
+    data-repo={giscus.repo}
+    data-repo-id={giscus.repoId}
+    data-category={giscus.category}
+    data-category-id={giscus.categoryId}
+    data-mapping={giscus.mapping}
+    data-strict={giscus.strict}
+    data-reactions-enabled={giscus.reactionsEnabled ? "1" : "0"}
+    data-emit-metadata={giscus.emitMetadata ? "1" : "0"}
+    data-input-position={giscus.inputPosition}
+    data-theme="preferred_color_scheme"
+    data-lang={giscus.lang}
+    data-loading={giscus.loading}
+    crossorigin="anonymous"
+    async
+  ></script>
+</div>
+
+<script is:inline data-astro-rerun>
+  function syncGiscusTheme() {
+    const theme = document.documentElement.getAttribute("data-theme");
+    const giscusTheme = theme === "dark" ? "dark" : "light";
+
+    const sendMessage = (message) => {
+      const iframe = document.querySelector("iframe.giscus-frame");
+      if (iframe?.contentWindow) {
+        iframe.contentWindow.postMessage(message, "https://giscus.app");
+      }
+    };
+
+    // 초기 테마 설정 (Giscus iframe 로드 대기)
+    const waitForGiscus = setInterval(() => {
+      const iframe = document.querySelector("iframe.giscus-frame");
+      if (iframe) {
+        clearInterval(waitForGiscus);
+        sendMessage({
+          giscus: { setConfig: { theme: giscusTheme } },
+        });
+      }
+    }, 100);
+
+    // 테마 변경 감지
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === "data-theme") {
+          const newTheme = document.documentElement.getAttribute("data-theme");
+          const newGiscusTheme = newTheme === "dark" ? "dark" : "light";
+          sendMessage({
+            giscus: { setConfig: { theme: newGiscusTheme } },
+          });
+        }
+      });
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+  }
+
+  syncGiscusTheme();
+
+  // Astro View Transitions 지원
+  document.addEventListener("astro:after-swap", syncGiscusTheme);
+</script>

@@ -8,6 +8,7 @@ import Datetime from "@/components/Datetime.astro";
 // import EditPost from "@/components/EditPost.astro";
 import ShareLinks from "@/components/ShareLinks.astro";
 import BackButton from "@/components/BackButton.astro";
+import Comments from "@/components/Comments.astro";
 import { getPath } from "@/utils/getPath";
 import { slugifyStr } from "@/utils/slugify";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg?react";
@@ -126,6 +127,11 @@ const nextProject =
         <span>위로가기</span>
       </button>
     </div>
+
+    <hr class="my-6 border-dashed" />
+
+    <!-- Comments Section -->
+    <Comments />
 
     <hr class="my-6 border-dashed" />
 

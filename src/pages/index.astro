@@ -7,6 +7,7 @@ import Socials from "@/components/Socials.astro";
 import LinkButton from "@/components/LinkButton.astro";
 import Card from "@/components/Card.astro";
 import Hr from "@/components/Hr.astro";
+import Comments from "@/components/Comments.astro";
 import getSortedEntries from "@/utils/getSortedEntries";
 import IconRss from "@/assets/icons/IconRss.svg?react";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg?react";
@@ -128,6 +129,14 @@ const featuredBooks = sortedBooks.filter(({ data }) => data.featured);
         <IconArrowRight className="inline-block" />
       </LinkButton>
     </div>
+
+    <Hr />
+
+    <!-- 댓글 섹션 -->
+    <section id="comments" class="pb-6">
+      <h2 class="text-2xl font-semibold tracking-wide mb-8">방명록</h2>
+      <Comments />
+    </section>
   </main>
   <Footer />
 </Layout>

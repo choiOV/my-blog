@@ -19,4 +19,18 @@ export const SITE = {
   dynamicOgImage: true,
   lang: "en", // html lang code. Set this empty and default will be "en"
   timezone: "Asia/Tokyo", // Default global timezone (IANA format) https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  giscus: {
+    enabled: true,
+    repo: "choiOV/my-blog",
+    repoId: "R_kgDOOt9kEA",
+    category: "Announcements",
+    categoryId: "DIC_kwDOOt9kEM4Cz2NP",
+    mapping: "pathname" as const,
+    strict: "0",
+    reactionsEnabled: true,
+    emitMetadata: true,
+    inputPosition: "top" as const,
+    lang: "ko" as const,
+    loading: "lazy" as const,
+  },
 } as const;
